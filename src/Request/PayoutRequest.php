@@ -12,7 +12,8 @@ use Webmozart\Assert\Assert;
 /**
  * Class PayoutRequest.
  * * Cette classe gère les demandes de Payout (paiement vers un client).
- * Elle valide le format du numéro de téléphone obligatoire pour ce flux.
+ * Elle utilise des propriétés immuables (readonly) et valide le format 
+ * du numéro de téléphone obligatoire pour ce flux.
  * * @author Rooney kalumba
  */
 final class PayoutRequest extends Request
@@ -31,8 +32,8 @@ final class PayoutRequest extends Request
         string $reference,
         Currency $currency,
         string $callbackUrl,
-        public string $phone,
-        public Type $type = Type::MOBILE,
+        public readonly string $phone,
+        public readonly Type $type = Type::MOBILE,
     ) {
         // Validation stricte du format du numéro de téléphone (Ex: 243000000000)
         Assert::length($this->phone, 12, 'The phone number should be 12 characters long, eg: 243123456789');
