@@ -9,7 +9,9 @@ use Symfony\Component\Serializer\Attribute\SerializedName;
 
 /**
  * Class PayoutResponse.
- * * Représente la réponse suite à une demande de Payout (versement).
+ * * Représente la réponse suite à une demande de Payout (versement vers un client).
+ *
+ * @author bernard-ng <bernard@devscast.tech>
  */
 final class PayoutResponse extends FlexpayResponse
 {
