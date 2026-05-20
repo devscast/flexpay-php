@@ -8,6 +8,8 @@ use Devscast\Flexpay\Data\Status;
 
 /**
  * Class CardResponse.
+ * * Représente la réponse suite à une demande de paiement par carte.
+ * Elle inclut l'URL de redirection vers la passerelle de paiement.
  *
  * @author bernard-ng <bernard@devscast.tech>
  */
